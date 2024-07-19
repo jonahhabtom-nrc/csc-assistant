@@ -312,6 +312,7 @@ async def send_chat_request(request_body, request_headers):
             
     request_body['messages'] = filtered_messages
     model_args = prepare_model_args(request_body, request_headers)
+    print(model_args)
 
     try:
         azure_openai_client = init_openai_client()
